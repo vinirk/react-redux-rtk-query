@@ -1,11 +1,15 @@
 import { FC } from 'react';
 import './style.css';
 
-interface FooterProps {}
+interface FooterProps {
+  description?: string;
+}
 
-const Footer: FC<FooterProps> = (): JSX.Element => (
+const Footer: FC<FooterProps> = ({
+  description = 'Vinicius | vinirk@gmail.com',
+}): JSX.Element => (
   <footer className='footer-container'>
-    <span>Vinicius | vinirk@gmail.com</span>
+    <span>{description}</span>
   </footer>
 );
 
